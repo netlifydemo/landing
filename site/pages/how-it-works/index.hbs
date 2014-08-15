@@ -1,0 +1,129 @@
+{{#layout}}
+
+<div class="hero">
+  <div class="container">
+    <div class="text-center">
+      <h1>Netlify vs Traditional website</h1>
+      <h2>Comparing static and dynamic solutions</h2>
+    </div>
+  </div>
+</div>
+
+<div class="explanation section" ng-controller="howCtrl">
+  <div class="container">
+    <h2 class="text-center">Serving the website</h2>
+
+    <div class="row text-center">
+      <div class="large-6 columns">
+        <h2>Traditional Dynamic Site</h2>
+
+        <div class="screen">
+          <i class="fa fa-user fa-5x"></i>
+          <h4>User visits a url</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-laptop fa-5x"></i>
+          <h4>Browser sends request to the server</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-gear fa-5x fa-spin"></i>
+          <h4>Server runs a PHP/Ruby/Python program</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-database fa-5x"></i>
+          <h4>Server fetches content from a DB</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-gear fa-5x fa-spin"></i>
+          <h4>Server combines templates and content from DB</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-code fa-5x"></i>
+          <h4>Server sends HTML to browser</h4>
+        </div>
+      </div>
+
+      <div class="large-6 columns">
+        <h2>Netlify</h2>
+
+        <div class="screen">
+          <i class="fa fa-user fa-5x"></i>
+          <h4>User visits a url</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-laptop fa-5x"></i>
+          <h4>Browser sends request to the CDN edge node</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-code fa-5x"></i>
+          <h4>CDN edge node sends HTML to browser</h4>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-center">Updating the website</h2>
+
+    <div class="row text-center">
+      <div class="large-6 columns">
+        <div class="screen">
+          <i class="fa fa-user fa-5x"></i>
+          <h4>User wants to update content</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-laptop fa-5x"></i>
+          <h4>Edits content through admin-ui in browser</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-database fa-5x"></i>
+          <h4>Admin UI updates the database</h4>
+        </div>
+      </div>
+      <div class="large-6 columns">
+        <div class="screen">
+          <i class="fa fa-user fa-5x"></i>
+          <h4>User wants to update content</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-laptop fa-5x"></i>
+          <h4>Uses webui, code editor, app or other content editor</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-git fa-5x"></i>
+          <h4>Tools updates Git repository</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-gear fa-5x fa-spin"></i>
+          <h4>Netlify detects update and runs a build</h4>
+        </div>
+
+        <div class="screen">
+          <i class="fa fa-cloud-upload fa-5x"></i>
+          <h4>Netlify deploys all generated HTML files to CDN</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-6 columns large-centered">
+        <hr>
+        <h3>Netlify moves all of the work to compile time, rather than runtime, and decouples building the site from serving the site</h3>
+
+        <h3>Result: <strong>Fastest possible websites, 100% uptime and no security exploits</strong></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{/layout}}

@@ -1,0 +1,4 @@
+.bitballoon
+build/
+tmp/
+node_modules/
