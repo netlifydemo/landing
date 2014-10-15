@@ -38,6 +38,10 @@ a:hover {
   color: #4FC1E9;
 }
 
+a[ng-click] {
+  cursor: pointer;
+}
+
 /* Grid system */
 .row {
   width: 100%;
@@ -1038,6 +1042,11 @@ a:hover {
 .blurb h3 {
   color: #DA4453;
   margin: 30px 0 3px;
+}
+
+ul.unstyled {
+  list-style: none;
+  padding: none;
 }
 
 hr.small {
