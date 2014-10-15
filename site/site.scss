@@ -1165,6 +1165,11 @@ header .nav a {
     z-index: 10; /* keep on top of other elements on the page */
     outline: 9999px solid rgba(0,0,0,0.5);
     box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.ng-scope .modal {
+  display: block;
 }
 
 #mc_embed_signup form {
