@@ -18,7 +18,7 @@
   {{css-tags 'site'}}
   <script src="/static/angular.js"></script>
   </head>
-  <body ng-app="netlifyApp" ng-controller="modalCtrl">
+  <body ng-app="netlifyApp" ng-controller="modalCtrl" ng-click="closeModal($event)">
     {{>header}}
     {{{yield}}}
     {{>footer}}

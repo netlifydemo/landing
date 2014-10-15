@@ -42,6 +42,13 @@ a[ng-click] {
   cursor: pointer;
 }
 
+a.logo, a.logo:link, a.logo:active, a.log:visited {
+  color: #DA4453
+}
+a.logo:hover {
+  color: #ED5565;
+}
+
 /* Grid system */
 .row {
   width: 100%;
