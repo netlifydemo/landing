@@ -9,9 +9,11 @@ angular.module('netlifyApp', []).controller('howCtrl', ['$scope', '$timeout', fu
   }
 
   $scope.closeModal = function($event) {
-    console.log($event)
-    $scope.modal = false;
+    for (var i in $event.path) {
+      if ($event.path[i].classList && $event.path[i].classList.contains("modal")) { return; }
+    }
 
+    $scope.modal = false;
   }
 
 }]);
