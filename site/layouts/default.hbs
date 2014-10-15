@@ -13,16 +13,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,100' rel='stylesheet' type='text/css'>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  
-  {{css-tags 'site'}}
+  <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 
+  {{css-tags 'site'}}
+  <script src="/static/angular.js"></script>
   </head>
-  <body ng-app="netlifyApp">
+  <body ng-app="netlifyApp" ng-controller="modalCtrl">
     {{>header}}
     {{{yield}}}
     {{>footer}}
 
-    <script src="/angular.js"></script>
-    <script src="/site.js"></script>
+<div class="modal" ng-show="show-modal">
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup" class="mailchimp-signup">
+<form action="//webpop.us2.list-manage.com/subscribe/post?u=3ca88a0cd26d026e590224d67&amp;id=9cd620827a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Sign up for the Beta</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_3ca88a0cd26d026e590224d67_9cd620827a" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<!--End mc_embed_signup-->
+</div>
+
+
+
+    <script src="/static/site.js"></script>
   </body>
 </html>
