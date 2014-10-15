@@ -1159,6 +1159,30 @@ header .nav a {
   padding: 20px;
 }
 
+.pricing-table {
+  list-style: none;
+  border: 1px solid #E6E9ED;
+  padding: 0;
+  li {
+    padding: 7px 20px;
+  }
+  .title {
+    font-size: 1.3em;
+    font-weight: bold;
+    background: #48CFAD;
+    color: #F5F7FA;
+    padding: 10px 20px;
+  }
+  .bullet-item {
+    border-bottom: 1px dotted #CCD1D9;
+  }
+  .price {
+    font-size: 1.1em;
+    font-weight: bold;
+    background: #E6E9ED;
+  }
+}
+
 .modal {
     /* some styles to position the modal at the center of the page */
     position: fixed;
