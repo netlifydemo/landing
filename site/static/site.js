@@ -39,18 +39,31 @@ angular.module('netlifyApp', ['ngSanitize']).controller('howCtrl', ['$scope', '$
         "Site updated:",
         "  http://www.netlify.com"
       ]
+    },
+    {
+      clear: true,
+      cmd: "cd ~/sites/my-middleman-site"
+    },
+    {
+      cmd: "netlify init",
+      out: [
+        {prompt: "Directory to deploy: ", answer: "build/"},
+        {prompt: "Your build command:", answer: "middleman build"},
+        "Configuring automated deploys for",
+        "  repo: github/netlify/landing",
+        "  branch: master",
+        "  dir: build/",
+        "  cmd: middleman deploy",
+        "Preparing deploy key",
+        "Adding deploy key to github repo",
+        "Creating netlify site",
+        "Adding webhook to repository",
+        "",
+        "Configuration complete.",
+        "When you push to Github, we'll build and deploy to:",
+        "  http://shepherd-hardy-53434.netlify.com"
+      ]
     }
-    // ,
-    // {
-    //   clear: true,
-    //   cmd: "cd ~/sites/my-middleman-site"
-    // },
-    // {
-    //   cmd: "netlify init",
-    //   out: [
-    //     ""
-    //   ]
-    // }
   ];
 
   var linenum = 0;
@@ -70,10 +83,18 @@ angular.module('netlifyApp', ['ngSanitize']).controller('howCtrl', ['$scope', '$
   var printOutput = function(outLines, num, cb) {
     var line = outLines[num];
     if (line) {
-      $scope.terminal.output += ("<br/>" + line);
-      $timeout(function() {
-        printOutput(outLines, num+1, cb);
-      }, Math.random() * 600 + 200);
+      var next = function() {
+        $timeout(function() {
+          printOutput(outLines, num+1, cb);
+        }, Math.random() * 600 + 200);
+      }
+      if (line.prompt) {
+        $scope.terminal.output += ("<br/>" + line.prompt + " ");
+        $timeout(function() { typeCmd(line.answer, next); }, Math.random() * 400 + 200);
+      } else {
+        $scope.terminal.output += ("<br/>" + line);
+        next()
+      }
     } else {
       cb();
     }
@@ -82,6 +103,9 @@ angular.module('netlifyApp', ['ngSanitize']).controller('howCtrl', ['$scope', '$
   var typeLine = function() {
     var line = lines[linenum];
     if (line) {
+      if (line.clear) {
+        $scope.terminal.output = "$ ";
+      }
       typeCmd(line.cmd, function() {
         printOutput(line.out || [], 0, function() {
           $scope.terminal.output += "<br/>$ ";
