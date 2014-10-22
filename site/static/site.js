@@ -58,7 +58,6 @@ angular.module('netlifyApp', ['ngSanitize']).controller('howCtrl', ['$scope', '$
         "Adding deploy key to github repo",
         "Creating netlify site",
         "Adding webhook to repository",
-        "",
         "Configuration complete.",
         "When you push to Github, we'll build and deploy to:",
         "  http://shepherd-hardy-53434.netlify.com"
