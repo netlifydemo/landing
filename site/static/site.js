@@ -54,12 +54,11 @@ angular.module('netlifyApp', ['ngSanitize']).controller('howCtrl', ['$scope', '$
         "  branch: master",
         "  dir: build/",
         "  cmd: middleman deploy",
-        "Preparing deploy key",
         "Adding deploy key to github repo",
         "Creating netlify site",
         "Adding webhook to repository",
         "Configuration complete.",
-        "When you push to Github, we'll build and deploy to:",
+        "Push to Github and Netlify builds and deploys:",
         "  http://shepherd-hardy-53434.netlify.com"
       ]
     }
