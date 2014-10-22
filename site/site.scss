@@ -1116,7 +1116,23 @@ header .nav a {
   .byline {
     font-weight: 300;
   }
+}
 
+.terminal {
+  margin-top: 59px;
+  box-shadow: 5px 5px 25px rgba(0,0,0,0.5);
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  pre {
+    background: #434A54;
+    height: 20em;
+    margin: 0;
+    padding: 20px;
+    color: #8CC152;
+    text-align: left;
+  }
 }
 
 .container {
@@ -1264,23 +1280,8 @@ header .nav a {
       a { color: #434A54; }
     }
   }
-
-}
-
-
-.terminal {
-  margin-top: 59px;
-  box-shadow: 5px 5px 25px rgba(0,0,0,0.5);
-  img {
-    display: block;
-    max-width: 100%;
-  }
-  pre {
-    background: #434A54;
-    height: 20em;
-    margin: 0;
-    padding: 20px;
-    color: #8CC152;
-    text-align: left;
+  .terminal pre {
+    font-size: 10px;
+    padding: 10px;
   }
 }
