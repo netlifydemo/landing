@@ -1,13 +1,24 @@
 {{#layout}}
 <div class="hero">
   <div class="container">
-    <h1>
-    <h1>Faster, safer and simpler websites.</h1>
-    <h3>Netlify builds, deploys and host static websites and apps.</h3>
-    <div>
-      <a ng-click="signup()" class="button button-primary">Sign up for the Beta</a>
-      <p class="byline">It's free, it's fast and it's fun!</p>
+    <div class="row">
+      <div class="large-6 columns">
+        <h1>Faster, simpler and safer websites.</h1>
+        <h3>Netlify builds, deploys and host static websites and apps.</h3>
+        <a ng-click="signup()" class="button button-primary">Sign up for the Beta</a>
+        <p class="byline">It's free, it's fast and it's fun!</p>
+      </div>
+      <div class="large-6 columns">
+        <div class="mockup terminal" ng-controller="terminalCtrl">
+          <div class="topbar">
+            <img src="/static/img/browser-bar.png"/>
+          </div>
+
+          <pre ng-bind-html="terminal.output"></pre>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>
 
