@@ -1066,8 +1066,8 @@ hr.small {
 
 .nav {
   list-style: none;
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
   a {
     color: #AAB2BD;
     text-decoration: none;
@@ -1190,6 +1190,19 @@ header .nav a {
   }
 }
 
+.large-claim {
+  font-weight: 200;
+  font-size: 30px;
+  strong { font-weight: normal; }
+  &:before {
+    content: " ";
+    display: block;
+    width: 80%;
+    margin: 50px auto 50px;
+    border-top: 1px solid #CCD1D9;
+  }
+}
+
 .modal {
     /* some styles to position the modal at the center of the page */
     position: fixed;
@@ -1218,4 +1231,39 @@ header .nav a {
 
 #mc_embed_signup input.email {
   width: 100%;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 55px;
+  }
+  .hero h3 {
+    margin: 40px 25px 40px;
+  }
+  header .nav {
+    display: none;
+  }
+  .fa-6x {
+    font-size: 12em;
+  }
+  .blurb {
+    padding: 10px 25px 50px;
+  }
+  .mobile-nav {
+    display: block;
+    li {
+      background: #CCD1D9;
+      padding: 18px;
+      border-top: 1px solid #AAB2BD;
+      a { color: #434A54; }
+    }
+  }
+
 }
