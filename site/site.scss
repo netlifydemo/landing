@@ -1248,6 +1248,17 @@ header .nav a {
   width: 100%;
 }
 
+#mc_embed_signup input.button {
+  background: #E9573F;
+  color: #fff;
+  padding: 18px 18px 20px;
+  line-height: 0;
+  margin: 12px 0 10px 0;
+}
+#mc_embed_signup input.button:hover {
+  background: #FC6E51;
+}
+
 .mobile-nav {
   display: none;
 }
