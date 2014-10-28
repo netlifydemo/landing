@@ -9,8 +9,10 @@ angular.module('netlifyApp', ['ngSanitize']).controller('howCtrl', ['$scope', '$
   }
 
   $scope.closeModal = function($event) {
-    for (var i in $event.path) {
-      if ($event.path[i].classList && $event.path[i].classList.contains("modal")) { return; }
+    var el = $event.target;
+    while (el) {
+      if (el.classList.contains("modal")) { return; }
+      el = el.parentElement;
     }
 
     $scope.modal = false;
